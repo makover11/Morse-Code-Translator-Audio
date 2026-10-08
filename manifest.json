@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Morse Code Audio Decoder & Translator",
+  "version": "1.0.0",
+  "description": "Audio Morse code translator with real-time mic and file decoding, oscilloscope visualizer, Farnsworth speed, and WAV export.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Morse Code Audio Decoder",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "clipboardWrite",
+    "contextMenus",
+    "notifications"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "Open Morse Code Audio Decoder"
+    }
+  }
+}
